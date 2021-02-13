@@ -1,3 +1,6 @@
+# pip install numpy
+import numpy as np
+
 BORD_SIZE = 8
 zeroBoard = np.zeros(BORD_SIZE * BORD_SIZE, dtype=int).reshape(BORD_SIZE, BORD_SIZE)
 ls = np.zeros(BORD_SIZE, dtype=int)
