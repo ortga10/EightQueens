@@ -1,7 +1,6 @@
-import numpy as np
-
-zeroBoard = np.zeros(64, dtype=int).reshape(8, 8)
-ls = [0, 0, 0, 0, 0, 0, 0, 0]
+BORD_SIZE = 8
+zeroBoard = np.zeros(BORD_SIZE * BORD_SIZE, dtype=int).reshape(BORD_SIZE, BORD_SIZE)
+ls = np.zeros(BORD_SIZE, dtype=int)
 result = []
 
 
@@ -28,7 +27,7 @@ def tryToFill(row):
         result.append(ls)
         return
 
-    for i in range(8):
+    for i in range(BORD_SIZE):
         if not isPassing(row, i):
             ls[row] = i
             tryToFill(row + 1)
