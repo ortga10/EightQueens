@@ -1,9 +1,9 @@
 # pip install numpy
 import numpy as np
 
-BORD_SIZE = 8
-zeroBoard = np.zeros(BORD_SIZE * BORD_SIZE, dtype=int).reshape(BORD_SIZE, BORD_SIZE)
-ls = np.zeros(BORD_SIZE, dtype=int)
+BOARD_SIZE = 8
+zeroBoard = np.zeros( BOARD_SIZE * BOARD_SIZE, dtype=int ).reshape( BOARD_SIZE, BOARD_SIZE )
+ls = np.zeros( BOARD_SIZE, dtype=int )
 result = []
 
 
@@ -30,7 +30,7 @@ def tryToFill(row):
         result.append(ls)
         return
 
-    for i in range(BORD_SIZE):
+    for i in range( BOARD_SIZE ):
         if not isPassing(row, i):
             ls[row] = i
             tryToFill(row + 1)
